@@ -41,6 +41,11 @@ export default {
     goTo: function (id) {
       this.$router.push('/contas/' + id)
     }
+  },
+  computed: {
+    accounts () {
+      return this.$store.state.account.accountList
+    }
   }
 }
 </script>
