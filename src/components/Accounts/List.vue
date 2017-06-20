@@ -46,6 +46,9 @@ export default {
     accounts () {
       return this.$store.state.account.accountList
     }
+  },
+  created () {
+    this.$store.dispatch('getAccounts')
   }
 }
 </script>
