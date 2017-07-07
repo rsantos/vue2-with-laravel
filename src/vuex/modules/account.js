@@ -28,7 +28,7 @@ export default {
       Vue.http.post('api/accounts', data)
     },
     updateAccount (context, params) {
-      Vue.http.put('api/accounts' + params.id, params.data)
+      Vue.http.put('api/accounts/' + params.id, params)
     },
     removeAccount (context, id) {
       Vue.http.delete('api/accounts/' + id)
