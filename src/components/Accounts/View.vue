@@ -42,7 +42,10 @@ export default {
   name: 'accounts-view',
   methods: {
     remove: function (id) {
-      this.$router.push('/contas')
+      this.$store.dispatch('removeAccount', this.$route.params.id)
+        .then(() => {
+          this.$router.push('/contas')
+        })
     }
   },
   computed: {
